@@ -1,0 +1,20 @@
+<!-- Now tell this that we are using switch -->
+<div [ngSwitch]="iconName">
+    <!-- In angular something inside this is " " not considered as string.It is treated to be variable or some code that has to be run.If you want it to be string then drap that inside single quotes.
+    We are doing this because iconName is a string. -->
+    <div *ngSwitchCase=" 'empty' ">
+        <fa-icon [icon]="faPen" class="icon"></fa-icon>
+    </div>
+
+    <div *ngSwitchCase=" 'cross' ">
+        <fa-icon [icon]="faTimes" class="icon text-info"></fa-icon>
+    </div>
+
+    <div *ngSwitchCase=" 'circle' ">
+        <fa-icon [icon]="faCircle" class="icon text-warning"></fa-icon>
+    </div>
+
+    <div *ngSwitchDefault>
+       Something is not Right!
+    </div>
+</div>
